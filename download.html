@@ -391,6 +391,46 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 //# sourceURL=https://hallogpt.com/wp-includes/js/wp-emoji-loader.min.js
 </script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"3f5524a18fa34f699dc0009030a2b4b2","r":1,"spa":2}' crossorigin="anonymous"></script>
-<script src="js/k2.js?v=d12"></script>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18143007203"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18143007203');
+</script>
+
+
+<!-- Event snippet for 购买 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18143007203/OFvoCKWQwqMdEOOjoctD',
+      'value': 1.0,
+      'currency': 'USD',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
+}
+</script>
+
+<script>
+// 5) 按钮统一跳转入口（所有 CTA 按钮 onclick="k2(); return false;" 调用）
+function k2() {
+  gtag_report_conversion('https://download.hallogptpro.com/Hello-GPT_1.4.59_x64.exe');
+}
+</script>
 </body>
 </html>
